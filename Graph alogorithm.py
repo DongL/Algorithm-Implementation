@@ -80,7 +80,7 @@ g.tree_number
 #################### # Problem 2 #####################
 # You are given a tree T with directed tree edges (each edge points from 
 # the parent to the child). How can you topologically sort the vertices of
-# T without doing DFS? Analyze the running time of your algorithm.
+# T without doing DFS?  
 
 class Node(object):
     def __init__(self, key):
