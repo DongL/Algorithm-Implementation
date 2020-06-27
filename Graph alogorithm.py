@@ -1,8 +1,7 @@
 #################### # Problem 1 #####################
 
 # A forest is a collection of trees. Given n nodes of a forest and their edges, 
-# describe and prove an algorithm (i.e., show correctness) that finds the number
-# of trees in the forest.
+# give an algorithm that finds the number of trees in the forest.
 
 class Node(object):
     def __init__(self, key):
