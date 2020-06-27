@@ -1,17 +1,26 @@
 # Algorithm Implementation
 
-## Sorting
+## Basic Algorithms
 
-[Bubble sort]()
+### Divdie and conquer
 
-[Merge sort]()
+[Divdie and conquer](https://github.com/DongL/Algorithm-Implementation/blob/master/Divide-and-conquer.py)
 
+### Sorting
 
-## Graph algorithms
+[Bubble sort](https://github.com/DongL/Algorithm-Implementation/blob/master/Sorting%20algorithms.py)
 
-[Huffman code]()
+[Merge sort](https://github.com/DongL/Algorithm-Implementation/blob/master/Sorting%20algorithms.py)
 
-[Undirected bipartite]()
+[Insertion_sort](https://github.com/DongL/Algorithm-Implementation/blob/master/Sorting%20algorithms.py)
+
+### Graph algorithms
+
+[Graph algorithms](https://github.com/DongL/Algorithm-Implementation/blob/master/Graph%20alogorithm.py)
+
+[Huffman code](https://github.com/DongL/Algorithm-Implementation/blob/master/Huffman%20coding.py)
+
+[Undirected bipartite](https://github.com/DongL/Algorithm-Implementation/blob/master/Undirected%20bipartite%20graph.py)
 
 
 ## Machine learning
