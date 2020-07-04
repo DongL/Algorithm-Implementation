@@ -35,6 +35,8 @@
 
 ### Ensemble 
 
+[Random forest](Ensemble learning )
+
 [AdaBoost](https://github.com/DongL/Algorithm-Implementation/blob/master/AdaBoost.py)
 
 ### Dimension Reduction
