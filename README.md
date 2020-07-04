@@ -27,7 +27,7 @@
 
 ### Clustering
 
-[GMM]()
+[GMM](https://github.com/DongL/Algorithm-Implementation/blob/master/GMM.py)
 
 [KNN]()
 
@@ -35,10 +35,12 @@
 
 ### Ensemble 
 
-[AdaBoost]()
+[AdaBoost](https://github.com/DongL/Algorithm-Implementation/blob/master/AdaBoost.py)
 
 ### Dimension Reduction
 [PCA]()
+
+[Kernel PCA](https://github.com/DongL/Algorithm-Implementation/blob/master/Kernel%20PCA.py)
 
 [NMF]()
 
@@ -48,17 +50,22 @@
 
 ### Probabilistic Modeling
 
-[PLSI]()
+[PLSI](https://github.com/DongL/Algorithm-Implementation/blob/master/PLSI.py)
 
-### Deep learning
-[Neural network]()
+## Deep learning
+
+[Perceptron](https://github.com/DongL/Algorithm-Implementation/blob/master/Perceptron.py)
+
+[Neural network](https://github.com/DongL/Algorithm-Implementation/blob/master/Neural%20network.py)
 
 
-## Signal processing
+## Machine leanring in Signal processing
 
 [EM]()
 
 [HMM]()
+
+[Gibbs Sampling](https://github.com/DongL/Algorithm-Implementation/blob/master/Gibbs%20sampling.py)
 
 [Short-Time Fourier Transform](https://github.com/DongL/Algorithm-Implementation/blob/master/STFT.py)
 
