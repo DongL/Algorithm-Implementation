@@ -63,8 +63,6 @@ class Viterbi(object):
 
 
 #################### Self test #####################
-
-
 # Parameters
 T = np.array([[0.9, 0.1], [0, 1]])
 E = P_tilde 
@@ -82,23 +80,11 @@ plt.yticks([0.0, 1.0], ['Piano', 'Clap'])
 plt.colorbar()
 plt.gcf().set_size_inches(10, 4)
 plt.title('Posterior matrix uisng Viterbi algorithm')
-# Author: Dong Liang
-# Aug 12, 2020
-###########################################
-# Parameters
-T = np.array([[0.9, 0.1], [0, 1]])
-E = P_tilde 
-n_state = 2
-P0 = P_tilde[:, 0]
 
-# Viterbi
-vit = Viterbi(T, E, n_state, P0)
-vit.viterbi()
-
-# Visualize
-plt.imshow(vit.P_bar, aspect = 200, cmap = 'inferno')
+# Backtracing
+vit.backtracking()
+plt.plot(range(len(vit.hidden_state_sequence)), vit.hidden_state_sequence, 'o')
 plt.xticks(np.arange(1, P_tilde.shape[1], 50))
 plt.yticks([0.0, 1.0], ['Piano', 'Clap'])
-plt.colorbar()
-plt.gcf().set_size_inches(10, 4)
-plt.title('Posterior matrix uisng Viterbi algorithm')            
+plt.gcf().set_size_inches(8, 2)
+plt.title('Hidden states by Viterbi backtracking')
