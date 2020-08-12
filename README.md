@@ -29,9 +29,9 @@
 
 [GMM](https://github.com/DongL/Algorithm-Implementation/blob/master/GMM.py)
 
-[KNN]()
+[KNN](https://github.com/DongL/Algorithm-Implementation/blob/master/KNN.py)
 
-[K-mean]()
+[K-mean](https://github.com/DongL/Algorithm-Implementation/blob/master/Kmean.py)
 
 ### Ensemble 
 
@@ -44,11 +44,11 @@
 
 [Kernel PCA](https://github.com/DongL/Algorithm-Implementation/blob/master/Kernel%20PCA.py)
 
-[NMF]()
+[NMF](https://github.com/DongL/Algorithm-Implementation/blob/master/NMF.py)
 
-[ICA]()
+[ICA](https://github.com/DongL/Algorithm-Implementation/blob/master/ICA.py)
 
-[MDS]()
+[MDS](https://github.com/DongL/Algorithm-Implementation/blob/master/MDS.py)
 
 ### Probabilistic Modeling
 
@@ -60,13 +60,13 @@
 
 [Neural network](https://github.com/DongL/Algorithm-Implementation/blob/master/Neural%20network.py)
 
-[Convolutional autoencoder]()
+[Convolutional autoencoder](https://github.com/DongL/Algorithm-Implementation/blob/master/CNN_autoencoder.py)
 
 ## Machine leanring in Signal processing
 
-[EM]()
+[EM](https://github.com/DongL/Algorithm-Implementation/blob/master/GMM.py)
 
-[HMM]()
+[Viterbi(HMM)](https://github.com/DongL/Algorithm-Implementation/blob/master/Viterbi.py)
 
 [Gibbs Sampling](https://github.com/DongL/Algorithm-Implementation/blob/master/Gibbs%20sampling.py)
 
