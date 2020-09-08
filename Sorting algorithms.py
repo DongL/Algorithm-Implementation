@@ -1,12 +1,13 @@
 #################### bubble_sort #####################
+# O(n^2) time | O(1) space
+# Best O(n); Average, worst O(n^2) time  
 def bubble_sort(A):
     for i in range(len(A) - 1):
         for j in range(len(A) - 1, i, -1):
             if A[j] < A[j - 1]:
                 A[j], A[j - 1] = A[j - 1], A[j]
                 
-# O(n^2) time | O(1) space
-# Best O(n); Average O(n^2) time  
+
 def bubbleSort2(array):
 	for j in range(len(array)):
 		for i in range(len(array) - j - 1):
@@ -44,6 +45,8 @@ def merge_sort(A):
 
 
 #################### insertion_sort #####################
+# O(n^2) time | O(1) space
+# Best O(n); Average, worst O(n^2) time  
 def insertion_sort(A):
     for i in range(1,len(A)): 
                  
