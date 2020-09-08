@@ -9,11 +9,11 @@ def bubble_sort(A):
                 
 
 def bubbleSort2(array):
-	for j in range(len(array)):
-		for i in range(len(array) - j - 1):
+    for j in range(len(array)):
+	for i in range(len(array) - j - 1):
             if array[i] > array[i + 1]:
-				array[i], array[i + 1] = array[i + 1], array[i]
-	return array		                
+		array[i], array[i + 1] = array[i + 1], array[i]
+    return array		                
 
 
 #################### merge_sort #####################
@@ -49,12 +49,10 @@ def merge_sort(A):
 # Best O(n); Average, worst O(n^2) time  
 def insertion_sort(A):
     for i in range(1,len(A)): 
-                 
         currentvalue = A[i]     
         pos = i             
         
         while pos>0 and A[pos-1]>currentvalue:
-            
             A[pos]=A[pos-1]
             pos -= 1
 
@@ -62,15 +60,14 @@ def insertion_sort(A):
 
         
 def insertionSort2(array):
-    # Write your code here.
     for i in range(0, len(array)):
-		insertionSwap(array, i, i+1)
-	return array
+	insertionSwap(array, i, i+1)
+    return array
 			
 def insertionSwap2(array, i, j):
-	for k in range(len(array[:j])):
-		if array[i] < array[k]:
-			array[i], array[k] = array[k], array[i]
+    for k in range(len(array[:j])):
+	if array[i] < array[k]:
+	    array[i], array[k] = array[k], array[i]
 
 
         
