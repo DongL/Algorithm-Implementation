@@ -70,8 +70,25 @@ def insertionSwap2(array, i, j):
 	    array[i], array[k] = array[k], array[i]
 
 
-        
-        
+#################### selection_sort #####################         
+ # O(n^2) time | O(1) space                                                      
+ # Best O(n^2); Average, worst O(n^2) time    
+
+def selectionSort(array):
+    currentIdx = 0
+    while  currentIdx < len(array) - 1:
+        smallestIdx = currentIdx
+        for idx in range(currentIdx + 1, len(array)):
+            if array[smallest] > array[idx]:
+                smallest = idx
+        selectionSwap(currentIdx, smallestIdx, array)
+    return array
+
+def selelctionSwap(i, j, array):
+    array[i], array[j] = array[j], array[i]
+
+
+
 #################### findMedian #####################        
         
 def findMedian(A):
