@@ -33,7 +33,9 @@
 
 [K-mean](https://github.com/DongL/Algorithm-Implementation/blob/master/Kmean.py)
 
-### Ensemble 
+### Tree and Ensemble 
+
+[Decision tree](https://github.com/DongL/Algorithm-Implementation/blob/master/Decision%20tree.py)
 
 [Random forest (Ensemble learning)]()
 
