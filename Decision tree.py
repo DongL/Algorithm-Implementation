@@ -59,7 +59,6 @@ class Dtree(object):
             random_state=551
             ):
         '''
-        The DTL is modified from DECISION-TREE-LEARNING algorithm on the course textbook
         examples: (X, y)
         features: words
         return: a tree
