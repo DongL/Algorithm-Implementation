@@ -70,6 +70,8 @@
 
 [Viterbi(HMM)](https://github.com/DongL/Algorithm-Implementation/blob/master/Viterbi.py)
 
+[Rejection Sampling](https://github.com/DongL/Algorithm-Implementation/blob/master/Rejection_sampling.py)
+
 [Gibbs Sampling](https://github.com/DongL/Algorithm-Implementation/blob/master/Gibbs%20sampling.py)
 
 [Short-Time Fourier Transform](https://github.com/DongL/Algorithm-Implementation/blob/master/STFT.py)
