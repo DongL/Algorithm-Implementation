@@ -14,6 +14,16 @@
 
 [Insertion_sort](https://github.com/DongL/Algorithm-Implementation/blob/master/Sorting%20algorithms.py)
 
+### Search
+
+[Breadth first search]()
+
+[Depth first search]()
+
+[A* search]()
+
+
+
 ### Graph algorithms
 
 [Graph algorithms](https://github.com/DongL/Algorithm-Implementation/blob/master/Graph%20alogorithm.py)
