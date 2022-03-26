@@ -20,7 +20,7 @@
 
 [Depth first search](https://github.com/DongL/Algorithm-Implementation/blob/master/DFS.py)
 
-[A* search]()
+[A* search](https://github.com/DongL/Algorithm-Implementation/blob/master/A*.py)
 
 
 
