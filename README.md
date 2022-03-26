@@ -16,9 +16,9 @@
 
 ### Search
 
-[Breadth first search]()
+[Breadth first search](https://github.com/DongL/Algorithm-Implementation/blob/master/BFS.py)
 
-[Depth first search]()
+[Depth first search](https://github.com/DongL/Algorithm-Implementation/blob/master/DFS.py)
 
 [A* search]()
 
