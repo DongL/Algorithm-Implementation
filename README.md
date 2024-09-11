@@ -4,6 +4,8 @@
 
 [Stateful RNN](https://github.com/DongL/Algorithm-Implementation/blob/master/stateful_RNN.py)
 
+[WaveNet](https://github.com/DongL/Algorithm-Implementation/blob/master/wavenet.py)
+
 ## Basic Algorithms
 
 ### Divdie and conquer
