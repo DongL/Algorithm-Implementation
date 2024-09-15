@@ -2,7 +2,7 @@
 
 ## Generative AI
 
-[Stateful RNN](https://github.com/DongL/Algorithm-Implementation/blob/master/stateful_RNN.py)
+[Stateful RNN](https://github.com/DongL/Algorithm-Implementation/blob/master/Stateful_RNN.py)
 
 [WaveNet](https://github.com/DongL/Algorithm-Implementation/blob/master/wavenet.py)
 
