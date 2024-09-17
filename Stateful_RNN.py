@@ -1,4 +1,3 @@
-from re import I
 from typing import Any, Dict, Tuple
 
 import tensorflow as tf
@@ -58,7 +57,9 @@ def create_shakespeare_model(
         tf.keras.Model: The created Shakespeare model.
     """
     inputs = tf.keras.Input(
-        shape=(None,),  dtype=tf.int32, batch_size=batch_size if stateful else None,
+        shape=(None,),
+        dtype=tf.int32,
+        batch_size=batch_size if stateful else None,
     )
     x = tf.keras.layers.Embedding(input_dim=vocab_size, output_dim=embedding_dim)(
         inputs
@@ -123,7 +124,8 @@ def train_shakespeare_model(
     ]
 
     class FlexibleResetStatesCallback(tf.keras.callbacks.Callback):
-        '''flexible callback that allows for conditional state resetting'''
+        """flexible callback that allows for conditional state resetting"""
+
         def __init__(self, reset_frequency=1):
             super().__init__()
             self.reset_frequency = reset_frequency
@@ -139,7 +141,8 @@ def train_shakespeare_model(
                 print(f"States reset at epoch {epoch}")
 
     class ResetStatesCallback(tf.keras.callbacks.Callback):
-        '''Prevent unintended state carryover between unrelated sequences or at logical boundaries (like epoch ends).'''
+        """Prevent unintended state carryover between unrelated sequences or at logical boundaries (like epoch ends)."""
+
         def on_epoch_begin(self, epoch, logs=None):
             if hasattr(self.model, "reset_states"):
                 self.model.reset_states()
@@ -218,4 +221,51 @@ def create_and_train_shakespeare_model(
     return model, history, test_set, text_vec_layer
 
 
-# save the model
+# Generate text from the model
+@tf.function
+def predict_next_char(text, text_vec_layer, model, temperature=1.0):
+    """
+    Predict the next character based on the given text.
+
+    Args:
+        text (str): The input text.
+        text_vec_layer (tf.keras.layers.TextVectorization): The text vectorization layer.
+        model (tf.keras.Model): The trained model.
+        temperature (float): The temperature for sampling. Default is 1.0.
+
+    Returns:
+        str: The predicted next character.
+    """
+    input_vector = text_vec_layer([text])
+    input_dataset = tf.data.Dataset.from_tensor_slices(input_vector).batch(1)
+    predictions = model.predict(input_dataset)
+    next_char_probs = predictions[0, -1, :]  # (batch, time_steps, vocab_size)
+    scaled_logits = tf.math.log(next_char_probs) / temperature
+    char_index = tf.random.categorical(tf.expand_dims(scaled_logits, 0), num_samples=1)[
+        0, 0
+    ]
+    return text_vec_layer.get_vocabulary()[char_index]
+
+
+@tf.function
+def generate_text(text, text_vec_layer, model, n_chars=50, temperature=1.0):
+    """
+    Generate text by extending the given input text.
+
+    Args:
+        text (str): The initial text to extend.
+        text_vec_layer (tf.keras.layers.TextVectorization): The text vectorization layer.
+        model (tf.keras.Model): The trained model.
+        n_chars (int): The number of characters to generate. Default is 50.
+        temperature (float): The temperature for sampling. Default is 1.0.
+
+    Returns:
+        str: The extended text.
+    """
+    generated_text = text
+    for _ in range(n_chars):
+        next_char = predict_next_char(
+            generated_text, text_vec_layer, model, temperature
+        )
+        generated_text += next_char
+    return generated_text
