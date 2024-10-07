@@ -6,6 +6,11 @@
 
 [WaveNet](https://github.com/DongL/Algorithm-Implementation/blob/master/wavenet.py)
 
+## Natural Language Processing
+[Transformer (PyTorch)](https://github.com/DongL/Algorithm-Implementation/blob/master/transformer_pytorch.py)
+
+[Transformer (Tensorflow)](https://github.com/DongL/Algorithm-Implementation/blob/master/transformer_tensorflow.py)
+
 ## Basic Algorithms
 
 ### Divdie and conquer
