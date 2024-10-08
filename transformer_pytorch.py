@@ -265,7 +265,8 @@ class Encoder(nn.Module):
             TransformerBlock(d_k, d_model, n_heads, d_ff, dropout_prob)
             for _ in range(n_layers)
         ]
-        self.transformer_blocks = nn.Sequential(*transformer_blocks)
+        # self.transformer_blocks = nn.Sequential(*transformer_blocks)
+        self.transformer_blocks = nn.Sequential(transformer_blocks)
 
         self.ln = nn.LayerNorm(d_model)
         self.fc = nn.Linear(d_model, n_classes)
@@ -300,7 +301,9 @@ class Encoder(nn.Module):
         """
         x = self.embedding(x)  # (N, T, D)
         x = self.pos_encoding(x)  # (N, T, D)
-        x = self.transformer_blocks(x, mask)  # (N, T, D)
+        # x = self.transformer_blocks(x, mask)  # (N, T, D)
+        for block in self.transformer_blocks:
+            x = block(x, mask) # (N, T, D)
         x = x[:, 0, :]  # (N, D) - Selecting the first token's representation
         x = self.ln(x)  # (N, D)
         logits = self.fc(x)  # (N, n_classes)
