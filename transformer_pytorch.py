@@ -265,7 +265,7 @@ class Encoder(nn.Module):
             TransformerBlock(d_k, d_model, n_heads, d_ff, dropout_prob)
             for _ in range(n_layers)
         ]
-        self.transformer_blocks = nn.Sequential(transformer_blocks)
+        self.transformer_blocks = nn.ModuleList(transformer_blocks)
 
         self.ln = nn.LayerNorm(d_model)
         self.fc = nn.Linear(d_model, n_classes)
